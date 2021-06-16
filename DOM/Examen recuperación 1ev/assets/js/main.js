@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         button.style.padding = '1em';
     }
     const capa=document.getElementById('buttons-container');
-    const boton1=document.createElement('button');
+    const boton1=document.createElement('button'); 
     const text=document.getElementById('text');
     console.log(text);
     const div2=document.createElement('div');
@@ -28,15 +28,13 @@ document.addEventListener('DOMContentLoaded', () => {
     div2.appendChild(span1);
 
 
-
-    const result = () => {
-        span1.textContent = countWord(text);
-    }
-
     capa.appendChild(boton1);
     boton1.innerText='Contar Palabras'; 
     boton1.addEventListener('click',()=>{
       text.textContent = countWord(text);
       buttonstyle();
     });
+
+
+
 });
