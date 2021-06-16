@@ -1,0 +1,19 @@
+<!-- <div class="app-container">
+  <section class="menu">
+    <a routerLink='home' routerLinkActive='active-link'>Inicio</a>
+    <a routerLink='second-view' [queryParams]='{name: fran}' routerLinkActive='active-link'>Segunda vista</a>
+  </section>
+  <section class="content">
+    <router-outlet>
+
+    </router-outlet>
+  </section>
+</div> -->
+
+<div class="app">
+  <div class="buttons-container">
+    <button (click)='switchOn()' type="button">On</button>
+    <button (click)='switchOff()' type="button">Off</button>
+  </div>
+  <app-light-bulb #bulb></app-light-bulb>
+</div>
