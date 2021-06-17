@@ -57,12 +57,13 @@ button.disabled = true;
 casilla.addEventListener('change', function() {
     if (this.checked) {
       button.disabled = false;
-      button.style.backgroundColor = 'blue';
     } else {
         button.disabled = true;
-        button.style.backgroundColor = 'grey';
     }
   });
+
+// casilla.addEventListener('change', function(event){button.disabled = true ? false : true});
+
 
 
   //Ejercicio 6

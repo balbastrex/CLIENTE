@@ -24,7 +24,11 @@ article{
     flex-direction: inherit;
 }
 
-#img-button{
+#img-button:disabled{
+    background-color: grey;
+}
+
+#img-button:enabled{
     background-color: blue;
 }
 
