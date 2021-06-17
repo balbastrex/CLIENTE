@@ -9,39 +9,20 @@ newTitle.textContent = 'Ahora trabajando con DOM dinámico';
 
 // EJERCICIO 2
 
-// const sections = document.getElementsByTagName('div');
-// console.log(sections);
+const firstContainer = Array.from(document.getElementsByClassName('text-container'));
+firstContainer[0].id = "first-container";
 
-// const newId = (index) => {
-
-//     id = `sección${index}`;
-//     console.log(id);
-//     return id;
-
-// }; 
-
-
-// arrayfrom(sections).forEach(section => {section.id = `sección${sections.indexOf(secion)}`});
-// console.log(sections);
-//------------------------------------
-
-// [...sections].forEach(section => {section.id = `sección${}`});
-// console.log(sections);
-
-
-// [...sections].forEach(section => {console.log(section.id)
-    
-// });
-
+const secondContainer = Array.from(document.getElementsByClassName('image-container'));
+secondContainer[0].id = "second-container";
 
 
 // EJERCICIO 3
 
 const parrafo = document.querySelector('p');
 
-    parrafo.style.fontSize = '50%';
+parrafo.style.fontSize = '50%';
 
-    
+
 // const parrafos = document.getElementsByTagName('p');
 //     [...parrafos].forEach(parrafo => {
 //     parrafo.style.fontSize = '50px';
@@ -55,8 +36,8 @@ const links = document.getElementsByTagName('a');
 
 [...links].forEach(link => {
     // link.style.textDecoration = 'none';
-    link.addEventListener('mouseover', function(event){event.target.style.color = 'blue'; event.target.style.textDecoration = 'underline'});
-    link.addEventListener('mouseout', function(event){event.target.style.color = 'white'; event.target.style.textDecoration = 'none'});
+    link.addEventListener('mouseover', function (event) { event.target.style.color = 'blue'; event.target.style.textDecoration = 'underline' });
+    link.addEventListener('mouseout', function (event) { event.target.style.color = 'white'; event.target.style.textDecoration = 'none' });
 });
 
 
@@ -64,14 +45,26 @@ const links = document.getElementsByTagName('a');
 
 const imgElement = document.getElementById('second-container');
 
-//console.log(imgElement);
-
 const casilla = document.createElement('input');
 casilla.setAttribute('type', 'checkbox');
 
 imgElement.appendChild(casilla);
 
-// const casilla = document.createElement('checkbox');
 
-// document.body.firstChild(casilla);
+const button = document.getElementById('img-button');
+button.disabled = true;
 
+casilla.addEventListener('change', function() {
+    if (this.checked) {
+      button.disabled = false;
+      button.style.backgroundColor = 'blue';
+    } else {
+        button.disabled = true;
+        button.style.backgroundColor = 'grey';
+    }
+  });
+
+
+  //Ejercicio 6
+
+  button.addEventListener('onclick', function (event){button.disabled = true;document.getElementById('image').src='https://mymodernmet.com/wp/wp-content/uploads/2020/06/mariposa-monarca-fb.jpg';})
