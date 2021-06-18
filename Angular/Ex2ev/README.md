@@ -1,4 +1,4 @@
-# Examen2Ev
+# Ex2ev
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.4.
 

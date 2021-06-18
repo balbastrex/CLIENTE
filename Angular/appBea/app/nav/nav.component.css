@@ -1,0 +1,22 @@
+.nav{
+    background-color: #809ef0;
+    border:#809ef0 5px solid;
+    border-radius: 5px;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+     
+} 
+li{
+    
+    list-style:none;
+}
+a{
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: black;
+    text-decoration: none;
+}
