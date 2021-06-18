@@ -1,8 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    // Ejercicio 1
+
     const countWord = (section) => {
         let count = 0;
         const text = section.textContent.replace(',', '');
+        console.log(text);
         const textContent = text.replace('.', '');
         const words = textContent.split(' ');
         for (let i = 0; i < words.length; i++) {
@@ -12,25 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         return count;
     }
-
-
-    // function buttonstyle(button){
-    //     button.style.backgroundColor = 'blue';
-    //     button.style.padding = '1em';
-    // }
-
-
-
-    // const capa=document.getElementById('buttons-container');
-    // const boton1=document.createElement('button'); 
-
-    // const text=document.getElementById('text');
-    // console.log(text);
-
-    // const div2=document.createElement('div');
-    // text.appendChild(div2);
-    // const span1=document.createElement('span');
-    // div2.appendChild(span1);
 
     const capa = document.getElementById('buttons-container');
 
@@ -45,7 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const textContainer = document.getElementsByClassName('text-container');
     const text = textContainer[0];
-    console.log(text);
     
     const div2=document.createElement('div');
     const span1=document.createElement('span');
@@ -64,7 +47,44 @@ document.addEventListener('DOMContentLoaded', () => {
         button2.disabled = true;
     });
 
-    // ejercicio 4
+    // Ejercicio 2
+
+    const limitContainer = document.getElementsByClassName('input-container');
+    const limit = limitContainer[0];
+    console.log(limit);
+    
+    const textSize = (section, limit) => {
+        const text = section.textContent.replace(',', '');
+        console.log(text);
+        const textContent = text.replace('.', '');
+        console.log(textContent);
+        const words = textContent.split(' ');
+        console.log(words);
+        const newText = [];
+
+        for (let i = 0; i < words.length; i++) {
+            if (words[i].length > 0) {
+                newText.push(words[i]);
+            }
+
+            if (newText.length = (limit+1)){
+                return newText;
+            }
+        }
+
+    }
+
+    text.textContent = textSize(text, 2);
+
+    //Ejercicio 3
+
+    //Ejercicio 4
+
+    /*const bodyBg = document.querySelector('body');
+    bodyBg.addEventListener('mouseover', function(event){event.target.style.backgorundColor = 'deeppink';})
+    bodyBg.addEventListener('mouseout', function(event){event.target.style.backgorundColor = 'white';});*/
+
+    
 
 
 });
